@@ -32,7 +32,7 @@ fetch(url)
         document.getElementById("matches-played").innerHTML = typeof matchesPlayed === 'undefined' ? 'You have played 0 matches' : matchesPlayed;
         document.getElementById("placed-top").innerHTML = typeof matchesWon === 'undefined' ? 'You have won 0 matches' : matchesWon;
         document.getElementById("players-outlived").innerHTML = typeof playersOutlived === 'undefined' ? 'You have outplayed 0 players' : playersOutlived;
-        document.getElementById("overall-score").innerHTML = typeof score === 'undefined' ? '0' : score;
+        document.getElementById("overall-score").innerHTML = typeof score === 'undefined' ? 'Big fat 0' : score;
     }).catch(function(error) {
         console.log('request failed', error);
     });
