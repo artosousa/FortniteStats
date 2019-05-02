@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Fortnite Stats</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <input type="text" placeholder="enter epic username" title="username" id="epic-username" />
+        <button id="user-submit" onClick="getUserStats()">GET STATS</button>
+
+
+        <div class="stat">
+            <h4>TOTAL KILLS:</h4>
+            <h2 id="total-kills"></h2>
+        </div>
+        <div class="stat">
+            <h4>MATCHES PLAYED:</h4>
+            <h2 id="matches-played"></h2>
+        </div>
+        <div class="stat">
+            <h4>MATCHES WON:</h4>
+            <h2 id="placed-top"></h2>
+        </div>
+        <div class="stat">
+            <h4>PLAYERS OUTLIVED:</h4>
+            <h2 id="players-outlived"></h2>
+        </div>
+        <div class="stat">
+            <h4>OVERALL SCORE:</h4>
+            <h2 id="overall-score"></h2>
+        </div>
+
+        <script src="js/script.js" ></script>
+    </body>
+</html>
