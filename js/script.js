@@ -4,12 +4,11 @@ const baseUrl = 'https://fortnite-public-api.theapinetwork.com/prod09/users';
 const inputField = document.getElementById("epic-username");
 const submitBtn = document.getElementById("user-submit");
 
-let username = "";
 
 const getUserStats = (event) => {
     // to prevent the regular form submit behavior
     event.preventDefault();
-    username = inputField.value;
+    const username = event.target.username.value;
   
     const proxyUrl = "https://cors-anywhere.herokuapp.com/";
     let url = `${baseUrl}/id?username=${username}` ;
