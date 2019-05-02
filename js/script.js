@@ -12,7 +12,6 @@ const username = event.target.username.value;
 
 const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 let url = `${baseUrl}/id?username=${username}` ;
-console.log(proxyUrl + url);
 fetch(url)
     .then((resp) => resp.json())
     .then((data) => {
@@ -27,7 +26,7 @@ fetch(url)
         const matchesWon = data.overallData.defaultModes.placetop1;
         const playersOutlived = data.overallData.defaultModes.playersoutlived; 
         const score = data.overallData.defaultModes.score;
-        console.log(data.overallData.defaultModes);
+        
         document.getElementById("total-kills").innerHTML = typeof totalKills === 'undefined' ? 'You have 0 kills' : `${totalKills} players killed in battle!`;
         document.getElementById("matches-played").innerHTML = typeof matchesPlayed === 'undefined' ? 'You have played 0 matches' : `You've gone to battle ${matchesPlayed} times!`;
         document.getElementById("placed-top").innerHTML = typeof matchesWon === 'undefined' ? 'You have won 0 matches' : `The champ is here! You've come out on top ${matchesWon} times!`;
