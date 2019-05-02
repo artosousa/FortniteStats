@@ -18,34 +18,52 @@ body{
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="rgb(255, 26, 195)",endColorstr="rgba(255, 40, 147, 0.80392)",GradientType=0);
 }
-
+#form{
+	border-bottom: dotted #fff 1px;
+	margin-bottom: 2em;
+}
 input[type="text"]{
     padding:10px; 
-    width:75%;
+    width:85%;
     background:none;
     font-size: 5em;
     color:white;
     border: none;
     font-family: 'Burbank Big Cd Bd';
+    
 }
 input[type="text"]:focus{
     outline: none;
 }
 #user-submit{
     font-family: 'Burbank Big Cd Bd';
+    width: 13%;
     font-size: 2em;
     color: #1e1e1e;
     background-color: #ff0;
     border:none;
-    padding:.25em .5em .25em .5em !important;
+    padding: .5em .5em !important;
     cursor: pointer;
+    position: relative;
+    top: -15px;
 }
-h2,h4{padding:0px; margin:0px;}
-h2{color:#fff; font-size:3em;}
+h2,
+h4{
+    padding:0px; 
+    margin:0px;
+    text-transform: uppercase;
+}
+h2{
+    color:#fff; 
+    font-size:3em;
+    text-transform: uppercase;
+}
+h4{
+    color:#0183b1;
+}
 div.stat{
-    padding: 2em;
+    height: 5em;
 }
 ::placeholder{color:#0183b1;}
 :-ms-input-placeholder{color:#0183b1;}
 ::-ms-input-placeholder{color:#0183b1;}
-h4{color:#0183b1;}
