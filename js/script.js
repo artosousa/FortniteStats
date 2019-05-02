@@ -28,11 +28,11 @@ fetch(url)
         const playersOutlived = data.overallData.defaultModes.playersoutlived; 
         const score = data.overallData.defaultModes.score;
         console.log(data.overallData.defaultModes);
-        document.getElementById("total-kills").innerHTML = typeof totalKills === 'undefined' ? 'You have 0 kills' : totalKills;
-        document.getElementById("matches-played").innerHTML = typeof matchesPlayed === 'undefined' ? 'You have played 0 matches' : matchesPlayed;
-        document.getElementById("placed-top").innerHTML = typeof matchesWon === 'undefined' ? 'You have won 0 matches' : matchesWon;
-        document.getElementById("players-outlived").innerHTML = typeof playersOutlived === 'undefined' ? 'You have outplayed 0 players' : playersOutlived;
-        document.getElementById("overall-score").innerHTML = typeof score === 'undefined' ? 'Big fat 0' : score;
+        document.getElementById("total-kills").innerHTML = typeof totalKills === 'undefined' ? 'You have 0 kills' : `You have killed ${totalKills} players!`;
+        document.getElementById("matches-played").innerHTML = typeof matchesPlayed === 'undefined' ? 'You have played 0 matches' : `You have played ${matchesPlayed} matches!`;
+        document.getElementById("placed-top").innerHTML = typeof matchesWon === 'undefined' ? 'You have won 0 matches' : `You have won ${matchesWon}!`;
+        document.getElementById("players-outlived").innerHTML = typeof playersOutlived === 'undefined' ? 'You have outplayed 0 players' : `You've outlived ${playersOutlived} players!`;
+        document.getElementById("overall-score").innerHTML = typeof score === 'undefined' ? 'Big fat 0' : `Your overall score is ${score}!`;
     }).catch(function(error) {
         console.log('request failed', error);
     });
