@@ -4,10 +4,13 @@ const baseUrl = 'https://fortnite-public-api.theapinetwork.com/prod09/users';
 const inputField = document.getElementById("epic-username");
 const submitBtn = document.getElementById("user-submit");
 const form = document.getElementById("form");
-
+const loaderHtml = document.getElementById('boxLoading');
 const getUserStats = (event) => {
-// to prevent the regular form submit behavior
 event.preventDefault();
+const loader = '<div class="lds-dual-ring"></div><h1>LOADING YOUR STATS...</h1>';
+loaderHtml.innerHTML = loader;
+// to prevent the regular form submit behavior
+
 const username = event.target.username.value;
 
 const proxyUrl = "https://cors-anywhere.herokuapp.com/";
@@ -17,8 +20,11 @@ fetch(url)
     .then((data) => {
         const userId = data.uid;
         let newUrl = `${baseUrl}/public/br_stats_v2?user_id=${userId}`;
-    
+     
+        loaderHtml.innerHTML = " ";
+        
         return fetch(newUrl);
+        
     })
     .then((resp) => resp.json()).then((data) => {
         const totalKills = data.overallData.defaultModes.kills;

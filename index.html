@@ -12,34 +12,36 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <form onsubmit="getUserStats" id="form">
-            <input type="text" placeholder="enter epic username" title="username" name="username" id="epic-username" autofocus/>
-            <button id="user-submit" type="submit">GET STATS</button>
-        </form>
+        <div id="wrapper">
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <form onsubmit="getUserStats" id="form">
+                <input type="text" placeholder="enter epic username" title="username" name="username" id="epic-username" autofocus/>
+                <button id="user-submit" type="submit">GET STATS</button>
+            </form>
 
-
-        <div class="stat">
-            <h4>TOTAL KILLS:</h4>
-            <h2 id="total-kills"></h2>
-        </div>
-        <div class="stat">
-            <h4>MATCHES PLAYED:</h4>
-            <h2 id="matches-played"></h2>
-        </div>
-        <div class="stat">
-            <h4>MATCHES WON:</h4>
-            <h2 id="placed-top"></h2>
-        </div>
-        <div class="stat">
-            <h4>PLAYERS OUTLIVED:</h4>
-            <h2 id="players-outlived"></h2>
-        </div>
-        <div class="stat">
-            <h4>OVERALL SCORE:</h4>
-            <h2 id="overall-score"></h2>
+            <div class="stat">
+                <h4>TOTAL KILLS:</h4>
+                <h2 id="total-kills"></h2>
+            </div>
+            <div class="stat">
+                <h4>MATCHES PLAYED:</h4>
+                <h2 id="matches-played"></h2>
+            </div>
+            <div class="stat">
+                <h4>MATCHES WON:</h4>
+                <h2 id="placed-top"></h2>
+            </div>
+            <div class="stat">
+                <h4>PLAYERS OUTLIVED:</h4>
+                <h2 id="players-outlived"></h2>
+            </div>
+            <div class="stat">
+                <h4>OVERALL SCORE:</h4>
+                <h2 id="overall-score"></h2>
+            </div>
+            <div id="boxLoading"></div>
         </div>
 
         <script src="js/script.js" ></script>
